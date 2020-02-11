@@ -42,7 +42,7 @@ class HttpRouter {
 
     private CompletionStage<HttpResponse> redirect(Http http, String url, int count) {
         return Patterns.ask(cacheActor, new CacheActor, Duration.ofMillis(5000)
-                
+                .thenCompose(randServer -> {
     }
 
 
