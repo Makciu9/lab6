@@ -1,5 +1,6 @@
 import akka.actor.ActorRef;
 import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
@@ -23,6 +24,10 @@ public class ZookeeperExecutor {
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL
         );
     }
-
+    @Override
+    public void process(WatchedEvent watchedEvent) {
+     try {
+         
+     }
     }
 }
