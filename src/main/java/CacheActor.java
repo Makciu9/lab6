@@ -1,5 +1,6 @@
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
+import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 
 
@@ -12,7 +13,11 @@ import static akka.actor.TypedActor.self;
 public class CacheActor extends AbstractActor {
 
     private List<String> serversList;
-        @Override
+
+    public static Props props() {
+    }
+
+    @Override
         public Receive createReceive() {
             return ReceiveBuilder.create()
                     .match(Servers.class, m -> {
