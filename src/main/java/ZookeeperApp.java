@@ -33,7 +33,7 @@ public class ZookeeperApp {
         System.out.println("start!");
         int serverPort;
         if (args.length < 1) {
-            System.err.println(
+            System.err.println("1log");
         }
         ActorSystem system = ActorSystem.create("strim");
         final Http http = Http.get(system);
