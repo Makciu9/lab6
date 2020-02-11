@@ -1,4 +1,5 @@
 import akka.actor.ActorRef;
+import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
@@ -11,15 +12,17 @@ public class ZookeeperExecutor {
     private ZooKeeper zoo;
     private ActorRef cacheActor;
 
-    public ZookeeperExecutor(ActorRef cacheActor, int serverPort){
+    public ZookeeperExecutor(ActorRef cacheActor, int serverPort) {
         this.cacheActor = cacheActor;
         zoo = new ZooKeeper(SERVER + "|" + PORT,
                 Duration.ofMillis(5000),
                 this
         );
         String serverUrl = "http://" + SERVER2 + serverPort;
-        zoo.create("/servers",  serverUrl.getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE,
+        zoo.create("/servers", serverUrl.getBytes(),
+                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL
+        );
+    }
 
     }
 }
