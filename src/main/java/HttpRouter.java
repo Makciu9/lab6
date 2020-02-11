@@ -22,7 +22,8 @@ class HttpRouter {
      Route createRoute(Http http){
          return route(
                  get(() ->
-                         parameter("url", (url)
+                         parameter("url", (url) ->
+                                 
      }
 
 }
