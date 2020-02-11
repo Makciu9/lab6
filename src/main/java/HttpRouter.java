@@ -33,6 +33,9 @@ class HttpRouter {
                                      }
                                  }))));
      }
-     
+
+    private CompletionStage<HttpResponse> fetch(Http http, String url) {
+    }
+
 
 }
