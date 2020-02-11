@@ -15,7 +15,7 @@ public class CacheActor extends AbstractActor {
         public Receive createReceive() {
             return ReceiveBuilder.create()
                     .match(Servers.class, m -> {
-                        System.out.println(
+                        System.out.println("Servers updated");
                         else sender().tell(new TestResult(m.getURL(), -1l), self());
 
                     })
