@@ -31,7 +31,9 @@ public class ZookeeperExecutor {
      try {
          List<String> serversNodes = zoo.getChildren("/servers", this);
          List<String> serversList = new ArrayList<>();
-         
+         for (String s : serversNodes) {
+             
+         }
      }
     }
 }
