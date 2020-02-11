@@ -19,7 +19,6 @@ public class CacheActor extends AbstractActor {
                         serversList = m.getSeverList();
                     })
                     .match(TestResult.class, m -> {
-                        store.put(m.getURL(), m.getTime());
                     })
             .build();
 
