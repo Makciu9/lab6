@@ -1,6 +1,8 @@
 import akka.actor.ActorRef;
 import org.apache.zookeeper.ZooKeeper;
 
+import java.time.Duration;
+
 public class ZookeeperExecutor {
     private static final String SERVER = "localhost";
     private static final int PORT = 8080;
@@ -10,6 +12,7 @@ public class ZookeeperExecutor {
     public ZookeeperExecutor(ActorRef cacheActor, int serverPort){
         this.cacheActor = cacheActor;
         zoo = new ZooKeeper(SERVER + "|" + PORT,
+                Duration.ofMillis(5000),
                 
     }
 }
