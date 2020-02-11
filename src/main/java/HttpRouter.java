@@ -35,7 +35,10 @@ class HttpRouter {
      }
 
     private CompletionStage<HttpResponse> fetch(Http http, String url) {
+        return http.singleRequest(HttpRequest.create(url));
     }
+
+    
 
 
 }
