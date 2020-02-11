@@ -38,7 +38,9 @@ class HttpRouter {
         return http.singleRequest(HttpRequest.create(url));
     }
 
-    
+    private CompletionStage<HttpResponse> redirect(Http http, String url, int count) {
+         
+    }
 
 
 }
