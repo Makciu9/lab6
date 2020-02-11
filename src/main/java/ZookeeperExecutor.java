@@ -1,8 +1,5 @@
 import akka.actor.ActorRef;
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.WatchedEvent;
-import org.apache.zookeeper.ZooDefs;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -36,6 +33,8 @@ public class ZookeeperExecutor {
              serversList.add(new String(server));
          }
          cacheActor.tell(new Servers(serversList), ActorRef.noSender());
+     } catch (KeeperException | InterruptedException e) {
+         
      }
     }
 }
