@@ -32,7 +32,7 @@ public class ZookeeperExecutor {
          List<String> serversNodes = zoo.getChildren("/servers", this);
          List<String> serversList = new ArrayList<>();
          for (String s : serversNodes) {
-             
+             byte[] server = zoo.getData("/servers/" + s, false, null)
          }
      }
     }
