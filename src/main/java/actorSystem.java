@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 import static akka.actor.TypedActor.self;
 
-public class actorSystem extends AbstractActor {
+public class CacheActor extends AbstractActor {
 
         private HashMap  <String, Long> store = new HashMap<>();
         //id res
