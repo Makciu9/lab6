@@ -18,7 +18,8 @@ public class CacheActor extends AbstractActor {
                         System.out.println("Servers updated");
                         serversList = m.getSeverList();
                     })
-                    .match(TestResult.class, m -> {
+                    .match(CacheActor.class, m -> {
+                        
                     })
             .build();
 

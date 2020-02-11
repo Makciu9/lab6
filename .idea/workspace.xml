@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74466933-7a9f-4a9c-a1d0-e568fc276c12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/actorSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/actorSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CacheActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CacheActor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
