@@ -45,7 +45,9 @@ class HttpRouter {
                 .thenCompose(randServer -> {
                     String redirectUrl = Uri.create((String) randServer)
                             .query(Query.create(
+                                    Pair.create("url", url),
                                     
+
                 }
     }
 
