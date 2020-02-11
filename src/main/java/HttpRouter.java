@@ -29,7 +29,7 @@ class HttpRouter {
                                      if (redirectCount != 0) {
                                          return completeWithFuture(redirect(http, url, redirectCount));
                                      } else{
-                                         
+                                         return completeWithFuture(fetch(http, url));
                                      }
                                  }
      }
