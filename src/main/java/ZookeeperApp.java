@@ -31,6 +31,7 @@ public class ZookeeperApp {
 
     public static void main(String[] args) throws IOException {
         System.out.println("start!");
+        int serverPort;
         ActorSystem system = ActorSystem.create("strim");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
