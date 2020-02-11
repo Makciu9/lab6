@@ -1,9 +1,10 @@
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
-public class HttpRouter {
+ class HttpRouter {
     private final ActorRef cacheActor;
-    public HttpRouter(ActorSystem system) {
+     HttpRouter(ActorSystem system) {
+         
     }
 
     public ActorRef getCacheActor() {
