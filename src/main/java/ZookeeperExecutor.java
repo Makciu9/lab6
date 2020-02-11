@@ -6,6 +6,6 @@ public class ZookeeperExecutor {
     private ActorRef cacheActor;
 
     public ZookeeperExecutor(ActorRef cacheActor, int serverPort){
-        
+        this.cacheActor = cacheActor;
     }
 }
