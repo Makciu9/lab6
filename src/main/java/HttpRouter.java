@@ -8,7 +8,7 @@ import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.http.javadsl.server.AllDirectives;
 
-import static akka.http.javadsl.server.Directives.route;
+import static akka.http.javadsl.server.Directives.*;
 
 class HttpRouter {
     private final ActorRef cacheActor;
@@ -22,6 +22,7 @@ class HttpRouter {
      Route createRoute(Http http){
          return route(
                  get(() ->
+                         parameter(
      }
 
 }
