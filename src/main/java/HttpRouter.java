@@ -25,6 +25,7 @@ class HttpRouter {
                          parameter("url", (url) ->
                                  parameter("count", (count) ->
                                  {
+                                     int redirectCount = Integer.parseInt(count);
                                      
                                  }
      }
