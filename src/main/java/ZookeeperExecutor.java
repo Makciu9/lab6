@@ -13,6 +13,7 @@ public class ZookeeperExecutor {
         this.cacheActor = cacheActor;
         zoo = new ZooKeeper(SERVER + "|" + PORT,
                 Duration.ofMillis(5000),
-                
+                this
+        );
     }
 }
