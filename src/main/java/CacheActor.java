@@ -23,7 +23,7 @@ public class CacheActor extends AbstractActor {
                         int randServerIdx = new Random().nextInt(serversList.size());
                         String randServer = serversList.get(randServerIdx);
                         System.out.println(randServer);
-
+                        sender().tell(randServer, self());
                     })
             .build();
 
