@@ -2,15 +2,11 @@ import java.util.List;
 public class Servers {
     private List<String> serversList;
     public Servers(List<String> serversList) {
-        this.URL = Url;
-        this.count = count;
+        this.serversList = serversList;
     }
-        public String getURL() {
-            return URL;
+        public List<String> getSeverList() {
+            return serversList;
         }
 
-        public int getCount() {
-            return count;
-        }
     }
 
