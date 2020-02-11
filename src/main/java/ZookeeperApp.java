@@ -16,7 +16,7 @@ import java.util.concurrent.CompletionStage;
 
 import static jdk.nashorn.internal.runtime.regexp.joni.constants.StackType.RETURN;
 
-public class Server {
+public class ZookeeperApp {
    private ActorRef storeActor;
 
     private ActorRef testPerformerRouter;
