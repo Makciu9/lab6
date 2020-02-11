@@ -5,6 +5,7 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import static akka.actor.TypedActor.self;
 
@@ -19,7 +20,8 @@ public class CacheActor extends AbstractActor {
                         serversList = m.getSeverList();
                     })
                     .match(CacheActor.class, m -> {
-                        
+                        int randServerIdx = new Random().nextInt(serversList.size());
+
                     })
             .build();
 
