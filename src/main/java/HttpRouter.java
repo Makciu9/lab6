@@ -4,7 +4,7 @@ import akka.actor.ActorSystem;
  class HttpRouter {
     private final ActorRef cacheActor;
      HttpRouter(ActorSystem system) {
-         cacheActor = system.actorOf(
+         cacheActor = system.actorOf(CacheActor,
     }
 
     public ActorRef getCacheActor() {
