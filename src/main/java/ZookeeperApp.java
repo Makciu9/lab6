@@ -21,7 +21,7 @@ public class ZookeeperApp {
 
     private ActorRef testPerformerRouter;
     private final String TEST_PERFORMER_ROUTER = "testPerformerRouter";
-
+    static final String ACTOR_SYSTEM_NAME = "routes";
     private ActorRef testPackageActor;
     private final String TEST_PACKAGE_ACTOR = "testPackageActor";
 
@@ -38,7 +38,7 @@ public class ZookeeperApp {
             serverPort = Integer.parseInt(args[0]);
         }
         System.out.println("start!");
-        ActorSystem system = ActorSystem.create("strim");
+        ActorSystem system = ActorSystem.create(ACTOR_SYSTEM_NAME);
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
 
