@@ -35,7 +35,7 @@ public class CacheActor extends AbstractActor {
 
     }
 
-    
 
-
+    public class GetRandomServer {
+    }
 }
