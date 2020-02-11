@@ -1,4 +1,5 @@
 import akka.actor.ActorRef;
+import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.time.Duration;
@@ -18,6 +19,7 @@ public class ZookeeperExecutor {
         );
         String serverUrl = "http://" + SERVER2 + serverPort;
         zoo.create("/servers",  serverUrl.getBytes(),
+                ZooDefs.Ids.OPEN_ACL_UNSAFE,
 
     }
 }
