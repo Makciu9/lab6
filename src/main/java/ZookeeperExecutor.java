@@ -5,6 +5,7 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.time.Duration;
+import java.util.List;
 
 public class ZookeeperExecutor {
     private static final String SERVER = "localhost";
@@ -27,7 +28,8 @@ public class ZookeeperExecutor {
     @Override
     public void process(WatchedEvent watchedEvent) {
      try {
-         List<String> serversNodes = zoo.getChildren(
+         List<String> serversNodes = zoo.getChildren("/servers", this);
+         
      }
     }
 }
