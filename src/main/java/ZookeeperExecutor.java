@@ -27,7 +27,7 @@ public class ZookeeperExecutor {
     @Override
     public void process(WatchedEvent watchedEvent) {
      try {
-         
+         List<String> serversNodes = zoo.getChildren(
      }
     }
 }
