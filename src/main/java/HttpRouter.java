@@ -3,6 +3,8 @@ import akka.actor.ActorSystem;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.server.Route;
 
+import static akka.http.javadsl.server.Directives.route;
+
 class HttpRouter {
     private final ActorRef cacheActor;
      HttpRouter(ActorSystem system) {
