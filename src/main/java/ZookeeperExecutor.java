@@ -16,6 +16,7 @@ public class ZookeeperExecutor {
                 Duration.ofMillis(5000),
                 this
         );
-        String serverUrl = "http://" + SERVER2 +
+        String serverUrl = "http://" + SERVER2 + serverPort;
+        
     }
 }
