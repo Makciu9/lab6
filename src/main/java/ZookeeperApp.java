@@ -30,7 +30,6 @@ public class ZookeeperApp {
 
 
     public static void main(String[] args) throws IOException {
-        System.out.println("start!");
         int serverPort;
         if (args.length < 1) {
             System.err.println("1log");
@@ -38,6 +37,7 @@ public class ZookeeperApp {
         } else {
             serverPort = Integer.parseInt(args[0]);
         }
+        System.out.println("start!");
         ActorSystem system = ActorSystem.create("strim");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
