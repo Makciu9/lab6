@@ -49,7 +49,8 @@ class HttpRouter {
                                     Pair.create("count", Integer.toString(count - 1))
                             ))
                             .toString();
-                    System.out.println("fetch ",
+                    System.out.println("fetch ", + redirectUrl);
+                    return 
 
                 }
     }
