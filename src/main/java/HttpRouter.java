@@ -1,3 +1,4 @@
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
 public class HttpRouter {
@@ -5,6 +6,6 @@ public class HttpRouter {
     }
 
     public ActorRef getCacheActor() {
-        
+        return cacheActor;
     }
 }
