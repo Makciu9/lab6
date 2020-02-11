@@ -1,7 +1,7 @@
 import java.util.List;
 public class Servers {
     private List<String> serversList;
-    public Servers(String Url, int count ) {
+    public Servers(List<String> serversList) {
         this.URL = Url;
         this.count = count;
     }
