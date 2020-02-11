@@ -34,7 +34,7 @@ public class ZookeeperExecutor {
          }
          cacheActor.tell(new Servers(serversList), ActorRef.noSender());
      } catch (KeeperException | InterruptedException e) {
-         
+         e.printStackTrace();
      }
     }
 }
