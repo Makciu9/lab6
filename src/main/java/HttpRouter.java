@@ -49,7 +49,7 @@ class HttpRouter {
                                     Pair.create("count", Integer.toString(count - 1))
                             ))
                             .toString();
-                    System.out.println(
+                    System.out.println("fetch ",
 
                 }
     }
