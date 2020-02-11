@@ -2,6 +2,8 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.server.Route;
+
+import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 import akka.http.javadsl.model.*;
 import akka.japi.Pair;
@@ -39,7 +41,7 @@ class HttpRouter {
     }
 
     private CompletionStage<HttpResponse> redirect(Http http, String url, int count) {
-        return Patterns.ask(cacheActor, new CacheActor,    
+        return Patterns.ask(cacheActor, new CacheActor, Duration.ofMillis(5000));
     }
 
 
