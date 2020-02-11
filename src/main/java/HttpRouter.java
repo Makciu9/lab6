@@ -46,7 +46,9 @@ class HttpRouter {
                     String redirectUrl = Uri.create((String) randServer)
                             .query(Query.create(
                                     Pair.create("url", url),
-                                    Pair.create("count", 
+                                    Pair.create("count", Integer.toString(count - 1))
+                            ))
+                            .toString();
 
                 }
     }
