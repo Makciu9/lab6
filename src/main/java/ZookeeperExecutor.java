@@ -15,5 +15,6 @@ public class ZookeeperExecutor {
                 Duration.ofMillis(5000),
                 this
         );
+        String serverUrl = "http://" + 
     }
 }
