@@ -25,7 +25,7 @@ public class CacheActor extends AbstractActor {
                         System.out.println("Servers updated");
                         serversList = m.getSeverList();
                     })
-                    .match(CacheActor.class, m -> {
+                    .match(CacheActor.GetRandomServer.class, m -> {
                         int randServerIdx = new Random().nextInt(serversList.size());
                         String randServer = serversList.get(randServerIdx);
                         System.out.println(randServer);
