@@ -35,6 +35,7 @@ public class ZookeeperExecutor {
              byte[] server = zoo.getData("/servers/" + s, false, null);
              serversList.add(new String(server));
          }
+         cacheActor.tell(new Servers(serversList), ActorRef.noSender());
      }
     }
 }
