@@ -46,7 +46,7 @@ public class ZookeeperApp {
 
         ZookeeperExecutor zookeeperExec = new ZookeeperExecutor(instance.getCacheActor(), serverPort);
 
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = ServerResult.ServerFlow(http, system, materializer);
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = instance.ServerFlow(system, materializer);
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
                 ConnectHttp.toHost(SERVER , PORT),
