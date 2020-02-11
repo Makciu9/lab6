@@ -44,7 +44,8 @@ class HttpRouter {
         return Patterns.ask(cacheActor, new CacheActor, Duration.ofMillis(5000)
                 .thenCompose(randServer -> {
                     String redirectUrl = Uri.create((String) randServer)
-                            .query()
+                            .query(Query.create(
+                                    
                 }
     }
 
