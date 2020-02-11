@@ -1,3 +1,4 @@
+import java.util.List;
 public class Servers {
     private List<String> serversList;
     public Servers(String Url, int count ) {
