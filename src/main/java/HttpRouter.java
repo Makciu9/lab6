@@ -27,6 +27,8 @@ class HttpRouter {
                                  {
                                      int redirectCount = Integer.parseInt(count);
                                      if (redirectCount != 0) {
+                                         return completeWithFuture(redirect(http, url, redirectCount));
+                                     } else{
                                          
                                      }
                                  }
